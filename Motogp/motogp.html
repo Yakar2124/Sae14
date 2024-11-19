@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGP - Sports de Moto</title>
+    <link rel="stylesheet" href="motogp-style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="image/aceuil/logo.jpg" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="pilotes.html">Pilotes</a></li>
+                <li><a href="circuits.html">Circuits</a></li>
+                <li><a href="ecuries.html">Écuries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Bienvenue dans le monde du MotoGP!</h1>
+            <p>Plongez dans l'univers passionnant de la MotoGP et découvrez les dernières actualités, les pilotes et bien plus encore.</p>
+        </section>
+
+        <section class="sports">
+            <div class="sport-card" id="motogp">
+                <!-- Image par défaut -->
+                <img src="image/aceuil/grid.jpg" alt="MotoGP" class="sport-img" id="defaultImage">
+            </div>
+        </section>
+
+        <!-- Nouvelle image qui apparaîtra au clic -->
+        <img src="image/aceuil/calander.jpg" alt="Nouvelle image MotoGP" id="newImage" style="display: none; width: 100%; height: auto; margin-top: 20px;">
+        
+        <script>
+            // Sélection des éléments HTML
+            const motogpCard = document.getElementById('motogp');
+            const defaultImage = document.getElementById('defaultImage');
+            const newImage = document.getElementById('newImage');
+        
+            // Ajouter un événement au clic pour afficher ou revenir à l'image initiale
+            motogpCard.addEventListener('click', () => {
+                if (defaultImage.style.display === 'none') {
+                    // Si la nouvelle image est affichée, on revient à l'image d'origine
+                    defaultImage.style.display = 'block';
+                    newImage.style.display = 'none';
+                } else {
+                    // Sinon, on cache l'image par défaut et on montre la nouvelle image
+                    defaultImage.style.display = 'none';
+                    newImage.style.display = 'block';
+                }
+            });
+        </script>
+
+        <div class="btn-group">
+            <a href="pilotes.html" class="btn">Découvrir les Pilotes de MotoGP</a>
+            <a href="circuits.html" class="btn">Découvrir les Circuits de MotoGP</a>
+            <a href="ecuries.html" class="btn">Découvrir les Écuries de MotoGP</a>
+        </div>
+    </main>
+
+    <!-- Section d'actualités -->
+    <section class="news">
+        <h2>Dernières actualités du MotoGP</h2>
+        <div class="news-item">
+            <h3>Jorge Martín sacré champion du monde</h3>
+            <p>Jorge Martín a remporté son premier titre de champion du monde de MotoGP lors du dernier Grand Prix à
+                Barcelone. Après une saison de lutte intense avec Francesco Bagnaia, Martín, pilote Ducati, a su
+                maintenir sa position et a scellé le titre avec une belle constance tout au long de l'année. :</p>
+            <img src="image/aceuil/martin.jpg" alt="">
+        </div>
+        <div class="news-item">
+            <h3>Le retour d'un pilote légendaire</h3>
+            <p>La saison MotoGP 2025 se prépare à des changements passionnants, avec plusieurs ajustements dans le
+                calendrier et de nouveaux visages sur la grille. Parmi les évolutions majeures, la saison commencera
+                à Buriram, en Thaïlande...</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 🚥 2024 - MotoGP Site. Tous droits réservés. Restez connecté pour plus d'action!</p>
+    </footer>
+</body>
+</html>

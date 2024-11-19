@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo {
+    width: 150px; /* Ajuste la taille à 150px */
+    height: auto; /* Maintient le ratio pour éviter la déformation */
+    display: block;
+    margin: 20px auto; /* Centre le logo horizontalement */
+    border-radius: 10px; /* Légèrement arrondi pour un look moderne */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation au survol */
+.logo:hover {
+    transform: scale(1.1); /* Zoom léger */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b; /* Fond violet sombre */
+    color: #e6e6e6; /* Texte clair */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #FF6F00; /* Violet foncé */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #FF6F00;
+}
+
+.circuits-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.circuit-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    background-color: #FF6F00;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.circuit-item:hover {
+    transform: translateY(-10px);
+}
+
+.circuit-text {
+    padding: 20px;
+    flex: 1;
+    color: #ffffff; /* Texte en violet clair */
+}
+
+.circuit-image {
+    flex-shrink: 0;
+}
+
+.circuit-image img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-left: 5px solid #FF6F00;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #FF6F00;
+    color: white;
+    margin-top: 20px;
+}

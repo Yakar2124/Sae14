@@ -6,16 +6,22 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #3E1D75;  /* Violet foncé comme fond global */
+    color: #fff;  /* Le texte sera en blanc pour contraster avec le fond sombre */
     line-height: 1.6;
 }
 
 header {
-    background-color: #e10600;
+    background-color: #5A2D97;  /* Violet plus sombre pour l'en-tête */
     color: white;
     text-align: center;
     padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -33,15 +39,47 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Effet hover pour les liens - jaune doré au survol */
+nav ul li a:hover {
+    background-color: #FFC107;  /* Jaune doré */
+    color: #000;
+}
+
+/* Style pour le lien actif */
+nav ul li a.active {
+    background-color: #4B0072;  /* Violet foncé pour l'actif */
+    color: #fff;
 }
 
 section {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background-color: white;
+    background-color: #6A4C9C;  /* Violet clair pour les sections */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Effet fadeIn */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 footer {
@@ -49,25 +87,9 @@ footer {
     padding: 15px;
     background-color: #333;
     color: white;
-
-}
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.9em;
 }
 
-/* Effet hover */
-nav ul li a:hover {
-    background-color: #b50c00;
-    color: #ffffff;
-}
-
-/* Style pour le lien actif */
-nav ul li a.active {
-    background-color: #580505;
-    color: #ffffff;
+footer p {
+    line-height: 1.5;
 }
