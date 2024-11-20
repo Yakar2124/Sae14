@@ -1,48 +1,133 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
+/* Réinitialisation de la mise en page */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
+/* En-tête */
 header {
-    background-color: #333;
+    background-color: #222;
     color: #fff;
-    padding: 20px;
+    padding: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animation pour l'apparition du titre */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
+nav ul li a:hover {
+    color: #f39c12; /* Changement de couleur au survol */
+    transform: scale(1.1); /* Effet d'agrandissement du texte au survol */
+}
+
+/* Section principale */
+main {
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-top: -20px;
+}
+
+/* Intro */
+.intro {
+    margin-bottom: 50px;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #777;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+/* Conteneur des cartes de sport */
 .sports-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin: 20px auto;
+    margin: 0 auto;
     max-width: 1200px;
+    animation: slideIn 1s ease-out;
 }
 
+/* Animation pour l'apparition du conteneur */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Carte de sport */
 .sport-card {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin: 20px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .sport-card:hover {
@@ -50,17 +135,75 @@ nav ul li a {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Effet d'agrandissement de l'image à l'intérieur de la carte */
 .sport-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    transition: transform 0.4s ease;
 }
 
+.sport-card:hover img {
+    transform: scale(1.1); /* L'image s'agrandit légèrement au survol */
+}
+
+/* Titre de la carte */
 .sport-card h2 {
     margin: 15px 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .sport-card p {
     padding: 0 15px 15px;
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Animation du texte au survol de la carte */
+.sport-card:hover h2 {
+    color: #f39c12; /* Le titre devient orange au survol */
+}
+
+/* Boutons dans les cartes */
+.sport-card a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sport-card a:hover {
+    transform: scale(1.1); /* Bouton qui grossit au survol */
+    background-color: #e67e22; /* Couleur plus foncée au survol */
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Animation de fade pour le footer */
+footer p {
+    animation: fadeIn 2s ease-out;
 }

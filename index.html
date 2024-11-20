@@ -4,48 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portail des Sports Automobiles</title>
+    <title>Portail des Sports et Loisirs</title>
     <link rel="stylesheet" href="style.css">
+    <!-- On peut aussi ajouter une Google Font pour moderniser la typographie -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Bienvenue sur le Portail des Sports Automobiles</h1>
-        <nav>
-            <ul>
-                <li><a href="moi.html">A propose de moi</a></li>
-            </ul>
-        </nav>
-        
+        <div class="header-container">
+            <h1>Bienvenue sur le Portail des Sports et Loisirs</h1>
+            <nav>
+                <ul>
+                    <li><a href="moi.html">À propos de moi</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <section class="intro">
+            <h2>Explorez les Sports, les Aventures et Bien Plus!</h2>
+            <p>Découvrez un monde d'émotions, de compétition et de passion à travers des sports et des activités fascinantes.</p>
+        </section>
+
         <div class="sports-container">
             <!-- Carte pour la Formule 1 -->
             <div class="sport-card" onclick="location.href='F1/F1.html'">
-                <img src="images/f1.jpg" alt="Formule 1">
-                <h2>Formule 1</h2>
+                <video width="320" height="240" autoplay loop muted>
+                    <source src="aceuille/F1.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la vidéo.
+                </video>
+                <h3>Formule 1</h3>
                 <p>Découvrez les pilotes, les écuries et les circuits de la F1.</p>
             </div>
 
             <!-- Carte pour le MotoGP -->
             <div class="sport-card" onclick="location.href='Motogp/motogp.html'">
-                <img src="images/motogp.jpg" alt="MotoGP">
-                <h2>MotoGP</h2>
+                <video width="320" height="240" autoplay loop muted>
+                    <source src="aceuille/moto.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la vidéo.
+                </video>
+                <h3>MotoGP</h3>
                 <p>Les pilotes les plus rapides sur deux roues.</p>
             </div>
 
             <!-- Carte pour le WRC Rally -->
             <div class="sport-card" onclick="location.href='wrc.html'">
                 <img src="images/wrc.jpg" alt="WRC Rally">
-                <h2>WRC Rally</h2>
+                <h3>WRC Rally</h3>
                 <p>Les rois du rallye tout-terrain.</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 - Portail des Sports Automobiles. Tous droits réservés.</p>
+        <p>&copy; 2024 - Portail des Sports et Loisirs. Tous droits réservés.</p>
     </footer>
 </body>
 
