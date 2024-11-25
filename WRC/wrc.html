@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRC - Championnat du Monde des Rallyes</title>
+    <link rel="stylesheet" href="wrc-style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="images/wrc/logo-wrc.jpg" alt="Logo WRC" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="pilotes.html">Pilotes</a></li>
+                <li><a href="rallies.html">Rallies</a></li>
+                <li><a href="ecuries.html">Équipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Bienvenue dans le monde du WRC!</h1>
+            <p>Découvrez l'univers palpitant du Championnat du Monde des Rallyes, ses pilotes audacieux, ses courses spectaculaires et bien plus encore.</p>
+        </section>
+
+        <section class="sports">
+            <div class="sport-card" id="wrc">
+                <!-- Image par défaut -->
+                <img src="images/wrc/car-action.jpg" alt="Rallye WRC" class="sport-img" id="defaultImage">
+            </div>
+        </section>
+
+        <!-- Nouvelle image qui apparaîtra au clic -->
+        <img src="images/wrc/rally-landscape.jpg" alt="Nouvelle image Rallye WRC" id="newImage" style="display: none; width: 100%; height: auto; margin-top: 20px;">
+
+        <script>
+            const wrcCard = document.getElementById('wrc');
+            const defaultImage = document.getElementById('defaultImage');
+            const newImage = document.getElementById('newImage');
+            
+            wrcCard.addEventListener('click', () => {
+                if (defaultImage.style.display === 'none') {
+                    defaultImage.style.display = 'block';
+                    newImage.style.display = 'none';
+                } else {
+                    defaultImage.style.display = 'none';
+                    newImage.style.display = 'block';
+                }
+            });
+        </script>
+
+        <div class="btn-group">
+            <a href="pilotes.html" class="btn">Voir les Pilotes du WRC</a>
+            <a href="rallies.html" class="btn">Explorer les Rallies</a>
+            <a href="equipes.html" class="btn">Découvrir les Équipes</a>
+        </div>
+    </main>
+
+    <!-- Section d'actualités -->
+    <section class="news">
+        <h2>Dernières actualités du WRC</h2>
+        <div class="news-item">
+            <h3>Sébastien Ogier décroche un autre titre</h3>
+            <p>Sébastien Ogier a marqué l'histoire du WRC en remportant son 9ème titre de champion du monde après une saison captivante face à ses rivaux. Découvrez comment il a dominé les pistes.</p>
+            <img src="images/wrc/ogier.jpg" alt="Sébastien Ogier">
+        </div>
+        <div class="news-item">
+            <h3>Un rallye inédit ajouté au calendrier</h3>
+            <p>Le WRC 2025 promet des surprises, avec un tout nouveau rallye dans les paysages spectaculaires de l'Amérique du Sud. Préparez-vous à une compétition exaltante!</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 🚗 2024 - WRC Site. Tous droits réservés. Restez connecté pour plus d'action!</p>
+    </footer>
+</body>
+</html>

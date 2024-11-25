@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilotes WRC</title>
+    <link rel="stylesheet" href="pilotes.css">
+</head>
+<body>
+    <header>
+        <a href="wrc.html">
+            <img src="image/accueil/logo_wrc.jpg" alt="Logo WRC" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="wrc.html">Accueil WRC</a></li>
+                <li><a href="pilotes.html" class="active">Pilotes</a></li>
+                <li><a href="rallies.html">Rallies</a></li>
+                <li><a href="ecuries.html">Écuries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pilotes-container">
+            <!-- Sébastien Loeb -->
+            <article class="pilote-card">
+                <a href="#modal-loeb">
+                    <img src="image/pilotes/loeb.jpg" alt="Sébastien Loeb" class="pilote-img">
+                </a>
+                <h3>Sébastien Loeb</h3>
+                <p>Sébastien Loeb, né le 26 février 1974, est un pilote français légendaire avec 9 titres mondiaux en WRC.</p>
+            </article>
+            <div id="modal-loeb" class="modal">
+                <a href="#">
+                    <img src="image/pilotes/loeb.jpg" alt="Sébastien Loeb">
+                </a>
+            </div>
+
+            <!-- Sébastien Ogier -->
+            <article class="pilote-card">
+                <a href="#modal-ogier">
+                    <img src="image/pilotes/ogier.jpg" alt="Sébastien Ogier" class="pilote-img">
+                </a>
+                <h3>Sébastien Ogier</h3>
+                <p>Sébastien Ogier, né le 17 décembre 1983, est un pilote français et multiple champion du monde de WRC.</p>
+            </article>
+            <div id="modal-ogier" class="modal">
+                <a href="#">
+                    <img src="image/pilotes/ogier.jpg" alt="Sébastien Ogier">
+                </a>
+            </div>
+
+            <!-- Kalle Rovanperä -->
+            <article class="pilote-card">
+                <a href="#modal-rovanpera">
+                    <img src="image/pilotes/rovanpera.jpg" alt="Kalle Rovanperä" class="pilote-img">
+                </a>
+                <h3>Kalle Rovanperä</h3>
+                <p>Kalle Rovanperä, né le 1er octobre 2000, est un jeune talent finlandais et champion du monde en 2022.</p>
+            </article>
+            <div id="modal-rovanpera" class="modal">
+                <a href="#">
+                    <img src="image/pilotes/rovanpera.jpg" alt="Kalle Rovanperä">
+                </a>
+            </div>
+
+            <!-- Thierry Neuville -->
+            <article class="pilote-card">
+                <a href="#modal-neuville">
+                    <img src="image/pilotes/neuville.jpg" alt="Thierry Neuville" class="pilote-img">
+                </a>
+                <h3>Thierry Neuville</h3>
+                <p>Thierry Neuville, né le 16 juin 1988, est un pilote belge reconnu pour sa constance et ses victoires en WRC.</p>
+            </article>
+            <div id="modal-neuville" class="modal">
+                <a href="#">
+                    <img src="image/pilotes/neuville.jpg" alt="Thierry Neuville">
+                </a>
+            </div>
+
+            <!-- Ott Tänak -->
+            <article class="pilote-card">
+                <a href="#modal-tanak">
+                    <img src="image/pilotes/tanak.jpg" alt="Ott Tänak" class="pilote-img">
+                </a>
+                <h3>Ott Tänak</h3>
+                <p>Ott Tänak, né le 15 octobre 1987, est un pilote estonien et champion du monde en 2019.</p>
+            </article>
+            <div id="modal-tanak" class="modal">
+                <a href="#">
+                    <img src="image/pilotes/tanak.jpg" alt="Ott Tänak">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 🚗 2024 - Site WRC. Tous droits réservés. Explorez les légendes du rallye !</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', () => {
+                window.location.hash = '';
+            });
+        });
+    </script>
+</body>
+</html>
