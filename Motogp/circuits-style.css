@@ -34,7 +34,7 @@ body {
 }
 
 header {
-    background-color: #FF6F00; /* Violet foncé */
+    background-color: #0004ff; /* Violet foncé */
     color: white;
     padding: 20px;
     text-align: center;
@@ -62,7 +62,7 @@ nav ul li a {
 
 nav ul li a.active,
 nav ul li a:hover {
-    background-color: #FF6F00;
+    background-color: #0004ff;
 }
 
 .circuits-container {
@@ -76,7 +76,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
-    background-color: #FF6F00;
+    background-color: #1E1E1E;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -101,13 +101,13 @@ nav ul li a:hover {
     width: 400px;
     height: 250px;
     object-fit: cover;
-    border-left: 5px solid #FF6F00;
+    border-left: 5px solid #0004ff;
 }
 
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #FF6F00;
+    background-color: #0004ff;
     color: white;
     margin-top: 20px;
 }
@@ -131,7 +131,7 @@ footer {
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #FF6F00;
+    background-color: #0004ff;
     color: white;
     margin-top: 20px;
 }
@@ -171,6 +171,7 @@ nav ul li a {k
     font-size: 1.2em;
 }
 
+
 nav ul li a:hover,
 nav ul li a.active {
     border-bottom: 2px solid #ffffff;
@@ -194,7 +195,7 @@ nav ul li a.active {
 .modal img {
     max-width: 80%;
     max-height: 80%;
-    border: 5px solid #FF6F00;
+    border: 5px solid #0004ff;
     border-radius: 10px;
 }
 

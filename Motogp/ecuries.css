@@ -29,7 +29,7 @@ body {
 
 /* En-tête */
 header {
-    background-color: #FF6F00;
+    background-color: #0004ff;
     color: white;
     padding: 20px;
     text-align: center;
@@ -69,7 +69,7 @@ nav ul li a {
 
 /* Carte des écuries */
 .ecurie-card {
-    background-color: #FF6F00; /* Fond orange */
+    background-color: #0004ff; /* Fond orange */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 280px;
@@ -126,7 +126,7 @@ nav ul li a {
 footer {
     text-align: center;
     padding: 15px;
-    background-color: #FF6F00;
+    background-color: #0004ff;
     color: white;
     margin-top: 20px;
 }
