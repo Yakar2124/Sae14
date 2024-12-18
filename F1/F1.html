@@ -3,65 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histoire de la F1</title>
+    <title>F1 - L'Univers de la Formule 1</title>
     <link rel="stylesheet" href="F1.css">
 </head>
 <body>
     <header>
-        <a href="index.html">
-            <img src="image/histoire/LogoF1.jpg" alt="Logo F1" class="logo">
+        <a href="../index.html">
+            <img src="image/aceuil/f1_logo.jpg" alt="Logo F1" class="logo">
         </a>
         <nav>
             <ul>
-                <li><a href="F1.html" class="active">Histoire</a></li>
-                <li><a href="pilotes.html">Les Pilotes</a></li>
-                <li><a href="ecuries.html">Les Écuries</a></li>
-                <li><a href="circuits.html">Les Circuits</a></li>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="pilotes.html">Pilotes</a></li>
+                <li><a href="circuits.html">Circuits</a></li>
+                <li><a href="ecuries.html">Écuries</a></li>
             </ul>
         </nav>
     </header>
-   <!-- Section Histoire avec Contenu et Images -->
-   <main>
-    <!-- Les débuts (1950-1960) -->
-    <section>
-        <h2>Les débuts (1950-1960)</h2>
-        <img src="image/histoire/fangio.jpg" alt="Les débuts de la F1" class="section-image">
-        <p>
-            La F1 des débuts était dominée par des écuries comme <strong>Alfa Romeo</strong>, <strong>Ferrari</strong>, et <strong>Mercedes-Benz</strong>. Des pilotes emblématiques comme <strong>Juan Manuel Fangio</strong> et <strong>Alberto Ascari</strong> ont marqué cette période.
-        </p>
+
+    <main>
+        <section class="intro">
+            <h1>Bienvenue dans l'univers de la Formule 1 !</h1>
+            <p>Découvrez la passion, la vitesse et l'excitation des courses de Formule 1. Suivez les pilotes, les circuits et les écuries emblématiques.</p>
+        </section>
+
+        <section class="sports">
+            <div class="sport-card" id="f1">
+                <img src="image/aceuil/grid_f1.jpg" alt="F1" class="sport-img" id="defaultImage">
+            </div>
+        </section>
+
+        <img src="image/aceuil/calendar_f1.jpg" alt="Nouvelle image F1" id="newImage" style="display: none; width: 100%; height: auto; margin-top: 20px;">
+        
+        <script>
+            const f1Card = document.getElementById('f1');
+            const defaultImage = document.getElementById('defaultImage');
+            const newImage = document.getElementById('newImage');
+
+            f1Card.addEventListener('click', () => {
+                if (defaultImage.style.display === 'none') {
+                    defaultImage.style.display = 'block';
+                    newImage.style.display = 'none';
+                } else {
+                    defaultImage.style.display = 'none';
+                    newImage.style.display = 'block';
+                }
+            });
+        </script>
+
+        <div class="btn-group">
+            <a href="pilotes.html" class="btn">Découvrir les Pilotes F1</a>
+            <a href="circuits.html" class="btn">Découvrir les Circuits F1</a>
+            <a href="ecuries.html" class="btn">Découvrir les Écuries F1</a>
+        </div>
+    </main>
+
+    <section class="news">
+        <h2>Dernières actualités de la Formule 1</h2>
+        <div class="news-item">
+            <h3>Max Verstappen triomphe pour un troisième titre consécutif</h3>
+            <p>Max Verstappen, pilote de l'écurie Red Bull Racing, a assuré son troisième titre mondial après une saison dominée par sa régularité et sa vitesse incroyable.</p>
+            <img src="image/aceuil/verstappen.jpg" alt="Max Verstappen">
+        </div>
+        <div class="news-item">
+            <h3>Un nouveau circuit rejoint le calendrier F1</h3>
+            <p>La saison F1 s'enrichit avec l'ajout d'un circuit spectaculaire au Moyen-Orient, promettant des courses palpitantes et un défi unique pour les pilotes.</p>
+        </div>
     </section>
 
-    <!-- L'évolution technologique (1970-1980) -->
-    <section>
-        <h2>L'évolution technologique (1970-1980)</h2>
-        <img src="image/histoire/sennalauda.jpg" alt="L'évolution technologique de la F1" class="section-image">
-        <p>
-            Cette décennie a vu l'introduction de nouvelles technologies comme les <strong>ailes aérodynamiques</strong> et les <strong>turbos</strong>. Les écuries comme <strong>McLaren</strong> et <strong>Williams</strong> se sont distinguées, tandis que des pilotes comme <strong>Niki Lauda</strong> et <strong>Ayrton Senna</strong> sont devenus des légendes.
-        </p>
-    </section>
-
-    <!-- L'ère moderne (1990-2000) -->
-    <section>
-        <h2>L'ère moderne (1990-2000)</h2>
-        <img src="image/histoire/schumacher.jpg" alt="L'ère moderne de la F1" class="section-image">
-        <p>
-            Le développement technologique a atteint un niveau sans précédent. <strong>Michael Schumacher</strong> a dominé les années 2000 avec <strong>Ferrari</strong>, remportant 7 titres mondiaux.
-        </p>
-    </section>
-
-    <!-- L'ère hybride (2014 à aujourd'hui) -->
-    <section>
-        <h2>L'ère hybride (2014 à aujourd'hui)</h2>
-        <img src="image/histoire/hamros.jpg" alt="L'ère hybride de la F1" class="section-image">
-        <p>
-            Depuis 2014, la F1 est entrée dans l'ère des moteurs <strong>hybrides</strong>. <strong>Mercedes</strong> a dominé cette période avec des pilotes comme <strong>Lewis Hamilton</strong>, qui a égalé le record de Schumacher avec 7 championnats du monde.
-        </p>
-    </section>
-</main>
-
-
-<footer>
-    <p>&copy; 🚥 2024 - Site F1. Tous droits réservés et n'oubliez pas Fernando is faster then you!!🏁🏎️💨🏎️💨🏎️💨🏎️💨🏎️💨🏎️💨</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 - F1 Site. Tous droits réservés. Restez connecté pour plus d'action et d'adrénaline !</p>
+    </footer>
 </body>
 </html>
